@@ -1,4 +1,5 @@
 <todo>
+  <todo-header></todo-header>
   <h3>{ opt.title }</h3>
   <ul>
     <li each={ items.filter(filter) }>
