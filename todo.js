@@ -1,5 +1,5 @@
-riot.tag('todo', '<todo-header></todo-header> <h3>{ opt.title }</h3> <ul> <li each="{ items.filter(filter) }"> <label class="{ completed: done }"> <input type="checkbox" __checked="{ done }" onclick="{ parent.toggle }"> { title } </label> </li> </ul> <form onsubmit="{ add }"> <input type="text" name="input" onkeyup="{ edit }"> <button __disabled="{ !text }">Add #{ items.filter(filter).length + 1 }</button> </form>', function(opts) {
-    this.items = opts.items
+riot.tag('todo', '<todo-header></todo-header> <h3>{ opts.title }</h3> <ul> <li each="{ items.filter(filter) }"> <label class="{ completed: done }"> <input type="checkbox" __checked="{ done }" onclick="{ parent.toggle }"> { title } </label> </li> </ul> <form onsubmit="{ add }"> <input type="text" name="input" onkeyup="{ edit }"> <button __disabled="{ !text }">Add #{ items.filter(filter).length + 1 }</button> </form>', 'label.completed { text-decoration: line-through; }', function(opts) {
+    this.items = opts.items || []
 
     this.edit = function(e) {
       this.text = e.target.value

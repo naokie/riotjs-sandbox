@@ -1,6 +1,11 @@
 <todo>
+  <style>
+    label.completed {
+      text-decoration: line-through;
+    }
+  </style>
   <todo-header></todo-header>
-  <h3>{ opt.title }</h3>
+  <h3>{ opts.title }</h3>
   <ul>
     <li each={ items.filter(filter) }>
       <label class={ completed: done }>
@@ -15,7 +20,7 @@
   </form>
 
   <script>
-    this.items = opts.items
+    this.items = opts.items || []
 
     edit(e) {
       this.text = e.target.value
