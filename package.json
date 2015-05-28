@@ -5,9 +5,17 @@
   "main": "index.html",
   "scripts": {
     "start": "riot .",
-    "watch": "riot -w ."
+    "watch": "riot -w .",
+    "browserify": "browserify -o bundle.js app.js"
   },
   "devDependencies": {
-    "riot": "^2.1.0"
+    "browserify": "^10.2.1",
+    "riot": "^2.1.0",
+    "riotify": "^0.1.0"
+  },
+  "browserify": {
+    "transform": [
+      "riotify"
+    ]
   }
 }
