@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "riot .",
+    "watch": "riot -w ."
+  },
+  "devDependencies": {
+    "riot": "^2.1.0"
   }
 }
