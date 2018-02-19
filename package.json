@@ -9,9 +9,9 @@
     "browserify": "browserify -o bundle.js app.js"
   },
   "devDependencies": {
-    "browserify": "^10.2.1",
-    "riot": "^2.1.0",
-    "riotify": "^0.1.0"
+    "browserify": "^16.1.0",
+    "riot": "^3.9.0",
+    "riotify": "^2.0.0"
   },
   "browserify": {
     "transform": [
